@@ -18,7 +18,7 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 
 ## 🚀 Démonstration
 
-**Application déployée :** [https://vercel.com/thomas-andersons-projects-96b1da16/v0-ecodecisions-clone](https://vercel.com/thomas-andersons-projects-96b1da16/v0-ecodecisions-clone)
+**Application déployée :** [https://ecologia-25.vercel.app/](https://ecologia-25.vercel.app/)
 
 ### Fonctionnalités
 - Quiz interactif de 20 questions personnalisées
@@ -94,7 +94,7 @@ python -m http.server 8000
 
 ### Structure du Projet
 ```
-ecodecisions-game/
+ecologia/
 ├── index.html          # Interface principale
 ├── style.css           # Styles et animations
 ├── script.js           # Logique du quiz
