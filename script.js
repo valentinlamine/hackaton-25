@@ -139,7 +139,7 @@ function showScreen(screenId) {
  * Affiche les règles
  */
 function showRules() {
-  document.getElementById("rules-modal").style.display = "block"
+  document.getElementById("rules-modal").style.display = "grid"
 }
 
 /**
@@ -318,6 +318,13 @@ function nextQuestion() {
  * Affiche les résultats
  */
 function showResults() {
+  document.body.style.height = "auto"
+  document.body.style.minHeight = "100vh"
+  const resultContainers = document.querySelectorAll("#results-screen .container");
+  resultContainers.forEach(container => {
+    container.style.height    = "auto";
+    container.style.minHeight = "100vh";
+  })
   showScreen("results-screen")
 
   // Calcule et affiche le score final
