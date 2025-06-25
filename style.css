@@ -83,9 +83,16 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.logo-icon {
-  font-size: 4rem;
+.logo-svg {
+  width: 80px;
+  height: 80px;
   animation: pulse 3s infinite;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Supprimer l'ancien style .logo-icon et le remplacer */
+.logo-icon {
+  display: none; /* Masquer l'ancien emoji */
 }
 
 @keyframes pulse {
@@ -789,6 +796,11 @@ body {
     font-size: 2.5rem;
   }
 
+  .logo-svg {
+    width: 60px;
+    height: 60px;
+  }
+
   .logo-icon {
     font-size: 3rem;
   }
@@ -893,6 +905,11 @@ body {
   .chart-section,
   .recommendations-section {
     padding: 1.5rem;
+  }
+
+  .logo-svg {
+    width: 50px;
+    height: 50px;
   }
 }
 
