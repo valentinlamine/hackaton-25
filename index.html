@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcologIA - Quiz Écologique Interactif</title>
+    <meta name="description" content="Testez votre impact environnemental avec ce quiz interactif de 20 questions sur l'écologie et le développement durable.">
+    <meta name="keywords" content="écologie, environnement, quiz, développement durable, empreinte carbone, test écologique">
+    <meta name="author" content="EcologIA">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ecodecisions.vercel.app/">
+    <meta property="og:title" content="EcologIA - Quiz Écologique">
+    <meta property="og:description" content="Découvrez votre impact environnemental avec ce quiz interactif de 20 questions">
+    <meta property="og:image" content="/placeholder.svg?height=630&width=1200">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ecodecisions.vercel.app/">
+    <meta property="twitter:title" content="EcologIA - Quiz Écologique">
+    <meta property="twitter:description" content="Découvrez votre impact environnemental avec ce quiz interactif">
+    <meta property="twitter:image" content="/placeholder.svg?height=630&width=1200">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Écran d'accueil -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <header class="welcome-header">
+                <div class="logo">
+                    <div class="logo-icon">🌱</div>
+                    <h1>EcologIA</h1>
+                </div>
+                <p class="subtitle">Découvrez l'impact de vos choix quotidiens sur notre planète</p>
+            </header>
+            
+            <div class="welcome-content">
+                <div class="info-card">
+                    <h2>Comment ça marche ?</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">📊</div>
+                            <p><strong>20 questions</strong> sur vos habitudes quotidiennes</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🎯</div>
+                            <p><strong>Score personnalisé</strong> basé sur vos réponses</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">💡</div>
+                            <p><strong>Conseils pratiques</strong> pour améliorer votre impact</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📈</div>
+                            <p><strong>Données factuelles</strong> après chaque question</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="start-btn" class="btn btn-primary">
+                        Commencer le quiz
+                    </button>
+                    <button id="rules-btn" class="btn btn-secondary">
+                        Voir les règles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal des règles -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Règles du jeu</h2>
+                <button class="close-btn" id="close-rules">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rules-section">
+                    <h3>🎯 Objectif</h3>
+                    <p>Évaluez votre impact environnemental à travers 20 questions sur vos habitudes quotidiennes.</p>
+                </div>
+                <div class="rules-section">
+                    <h3>📊 Scoring</h3>
+                    <p>Chaque réponse rapporte des points selon son impact écologique :</p>
+                    <ul>
+                        <li><span class="score-negative">Impact négatif</span> : -3 points</li>
+                        <li><span class="score-neutral">Impact modéré</span> : +1 point</li>
+                        <li><span class="score-positive">Impact positif</span> : +3 points</li>
+                    </ul>
+                </div>
+                <div class="rules-section">
+                    <h3>🏆 Résultats</h3>
+                    <p>À la fin, découvrez votre score global et des conseils personnalisés pour améliorer votre empreinte écologique.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Écran de quiz -->
+    <div id="quiz-screen" class="screen">
+        <div class="container">
+            <!-- En-tête du quiz -->
+            <div class="quiz-header">
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span id="question-counter">Question 1/20</span>
+                        <span id="current-score">Score: 0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <!-- Jauge écologique -->
+                <div class="eco-gauge">
+                    <div class="gauge-track">
+                        <div class="gauge-fill" id="gauge-fill"></div>
+                        <div class="gauge-indicator" id="gauge-indicator"></div>
+                    </div>
+                    <div class="gauge-labels">
+                        <span class="label-negative">Impact négatif</span>
+                        <span class="label-neutral">Neutre</span>
+                        <span class="label-positive">Impact positif</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question -->
+            <div class="question-card" id="question-card">
+                <div class="category-badge" id="category-badge"></div>
+                <h2 id="question-text"></h2>
+                
+                <div class="choices-container" id="choices-container">
+                    <!-- Les choix seront générés dynamiquement -->
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="feedback-card" id="feedback-card" style="display: none;">
+                <div class="feedback-header">
+                    <div class="feedback-icon" id="feedback-icon"></div>
+                    <h3 id="feedback-title"></h3>
+                </div>
+                <div class="fact-box">
+                    <div class="fact-icon">💡</div>
+                    <p id="feedback-fact"></p>
+                </div>
+                <button id="next-btn" class="btn btn-primary">
+                    Question suivante
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Écran de résultats -->
+    <div id="results-screen" class="screen">
+        <div class="container">
+            <div class="results-header">
+                <h1>🎉 Vos résultats</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="final-score">0</span>
+                        <span class="score-unit">%</span>
+                    </div>
+                    <div class="score-category" id="score-category"></div>
+                </div>
+            </div>
+
+            <div class="results-content">
+                <!-- Graphique par catégorie -->
+                <div class="chart-section">
+                    <h3>📊 Performance par catégorie</h3>
+                    <div class="category-chart" id="category-chart">
+                        <!-- Généré dynamiquement -->
+                    </div>
+                </div>
+
+                <!-- Recommandations personnalisées -->
+                <div class="recommendations-section">
+                    <h3>💡 Recommandations personnalisées</h3>
+                    <div id="recommendations-list" class="recommendations-list">
+                        <!-- Généré dynamiquement -->
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="actions-section">
+                    <button id="restart-btn" class="btn btn-primary">
+                        Refaire le quiz
+                    </button>
+                    <button id="share-btn" class="btn btn-secondary">
+                        Partager mes résultats
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

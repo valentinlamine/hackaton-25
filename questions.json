@@ -1,0 +1,631 @@
+{
+  "categories": [
+    { "id": "transport", "name": "Transport et Mobilité", "icon": "🚗" },
+    { "id": "alimentation", "name": "Alimentation et Consommation", "icon": "🍽️" },
+    { "id": "energie", "name": "Énergie et Habitat", "icon": "⚡" },
+    { "id": "dechets", "name": "Déchets et Recyclage", "icon": "♻️" },
+    { "id": "consommation", "name": "Consommation Responsable", "icon": "🛒" }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "category": "transport",
+      "question": "Comment vous déplacez-vous généralement pour vos trajets quotidiens ?",
+      "choices": [
+        {
+          "text": "Voiture individuelle",
+          "points": -3,
+          "feedback": {
+            "title": "Impact carbone élevé",
+            "fact": "En ville, 40% des trajets en voiture font moins de 3km et pourraient être remplacés par d'autres modes."
+          }
+        },
+        {
+          "text": "Transports en commun",
+          "points": 1,
+          "feedback": {
+            "title": "Bon choix collectif",
+            "fact": "En ville, 40% des trajets en voiture font moins de 3km et pourraient être remplacés par d'autres modes."
+          }
+        },
+        {
+          "text": "Vélo, marche, trottinette",
+          "points": 3,
+          "feedback": {
+            "title": "Excellent pour l'environnement !",
+            "fact": "En ville, 40% des trajets en voiture font moins de 3km et pourraient être remplacés par d'autres modes."
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "transport",
+      "question": "Pour vos vacances, vous privilégiez :",
+      "choices": [
+        {
+          "text": "L'avion pour partir loin",
+          "points": -3,
+          "feedback": {
+            "title": "Impact carbone très élevé",
+            "fact": "Un vol Paris-New York émet autant de CO2 qu'une année de chauffage d'un appartement."
+          }
+        },
+        {
+          "text": "Le train ou la voiture partagée",
+          "points": 1,
+          "feedback": {
+            "title": "Alternative plus durable",
+            "fact": "Un vol Paris-New York émet autant de CO2 qu'une année de chauffage d'un appartement."
+          }
+        },
+        {
+          "text": "Des destinations locales accessibles sans avion",
+          "points": 3,
+          "feedback": {
+            "title": "Choix très responsable !",
+            "fact": "Un vol Paris-New York émet autant de CO2 qu'une année de chauffage d'un appartement."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "transport",
+      "question": "Quand vous utilisez votre voiture :",
+      "choices": [
+        {
+          "text": "Vous prenez systématiquement la voiture, souvent seul(e)",
+          "points": -3,
+          "feedback": {
+            "title": "Utilisation peu optimisée",
+            "fact": "Le taux d'occupation moyen des voitures en France est de 1,4 personne par véhicule."
+          }
+        },
+        {
+          "text": "Vous pratiquez le covoiturage quand c'est possible",
+          "points": 1,
+          "feedback": {
+            "title": "Bonne pratique collaborative",
+            "fact": "Le taux d'occupation moyen des voitures en France est de 1,4 personne par véhicule."
+          }
+        },
+        {
+          "text": "Vous optimisez vos déplacements et combinez plusieurs trajets",
+          "points": 3,
+          "feedback": {
+            "title": "Approche très efficace !",
+            "fact": "Le taux d'occupation moyen des voitures en France est de 1,4 personne par véhicule."
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "transport",
+      "question": "Pour les petits trajets en ville :",
+      "choices": [
+        {
+          "text": "Vous prenez votre voiture par habitude",
+          "points": -3,
+          "feedback": {
+            "title": "Habitude peu écologique",
+            "fact": "Un trajet de 5km à vélo plutôt qu'en voiture évite l'émission d'1kg de CO2."
+          }
+        },
+        {
+          "text": "Vous utilisez les transports en commun",
+          "points": 1,
+          "feedback": {
+            "title": "Alternative collective",
+            "fact": "Un trajet de 5km à vélo plutôt qu'en voiture évite l'émission d'1kg de CO2."
+          }
+        },
+        {
+          "text": "Vous privilégiez la marche ou le vélo",
+          "points": 3,
+          "feedback": {
+            "title": "Parfait pour la santé et l'environnement !",
+            "fact": "Un trajet de 5km à vélo plutôt qu'en voiture évite l'émission d'1kg de CO2."
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "alimentation",
+      "question": "Quelle est votre consommation de produits animaux ?",
+      "choices": [
+        {
+          "text": "Viande à tous les repas",
+          "points": -3,
+          "feedback": {
+            "title": "Impact environnemental majeur",
+            "fact": "La production d'1kg de bœuf nécessite 15 000 litres d'eau contre 300 litres pour 1kg de légumes."
+          }
+        },
+        {
+          "text": "Consommation modérée, 2-3 fois par semaine",
+          "points": 1,
+          "feedback": {
+            "title": "Consommation raisonnée",
+            "fact": "La production d'1kg de bœuf nécessite 15 000 litres d'eau contre 300 litres pour 1kg de légumes."
+          }
+        },
+        {
+          "text": "Alimentation principalement végétale ou végétarienne",
+          "points": 3,
+          "feedback": {
+            "title": "Excellent choix environnemental !",
+            "fact": "La production d'1kg de bœuf nécessite 15 000 litres d'eau contre 300 litres pour 1kg de légumes."
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "alimentation",
+      "question": "Comment choisissez-vous vos fruits et légumes ?",
+      "choices": [
+        {
+          "text": "Sans attention particulière à l'origine ou la saison",
+          "points": -3,
+          "feedback": {
+            "title": "Impact carbone des transports",
+            "fact": "Un fruit hors saison importé consomme 10 à 20 fois plus d'énergie qu'un fruit local de saison."
+          }
+        },
+        {
+          "text": "En privilégiant les produits locaux quand possible",
+          "points": 1,
+          "feedback": {
+            "title": "Démarche positive",
+            "fact": "Un fruit hors saison importé consomme 10 à 20 fois plus d'énergie qu'un fruit local de saison."
+          }
+        },
+        {
+          "text": "En respectant la saisonnalité et l'origine locale",
+          "points": 3,
+          "feedback": {
+            "title": "Approche exemplaire !",
+            "fact": "Un fruit hors saison importé consomme 10 à 20 fois plus d'énergie qu'un fruit local de saison."
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "alimentation",
+      "question": "Face au gaspillage alimentaire :",
+      "choices": [
+        {
+          "text": "Vous jetez régulièrement des aliments",
+          "points": -3,
+          "feedback": {
+            "title": "Gaspillage important",
+            "fact": "Un tiers de la nourriture produite dans le monde est gaspillée, soit 1,3 milliard de tonnes par an."
+          }
+        },
+        {
+          "text": "Vous essayez de limiter le gaspillage sans planification spécifique",
+          "points": 1,
+          "feedback": {
+            "title": "Conscience du problème",
+            "fact": "Un tiers de la nourriture produite dans le monde est gaspillée, soit 1,3 milliard de tonnes par an."
+          }
+        },
+        {
+          "text": "Vous planifiez vos repas et utilisez les restes systématiquement",
+          "points": 3,
+          "feedback": {
+            "title": "Gestion exemplaire !",
+            "fact": "Un tiers de la nourriture produite dans le monde est gaspillée, soit 1,3 milliard de tonnes par an."
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "alimentation",
+      "question": "Pour votre café/thé quotidien :",
+      "choices": [
+        {
+          "text": "Capsules à usage unique",
+          "points": -3,
+          "feedback": {
+            "title": "Déchets considérables",
+            "fact": "10 milliards de capsules de café sont jetées chaque année dans le monde."
+          }
+        },
+        {
+          "text": "Café moulu/thé en vrac occasionnellement",
+          "points": 1,
+          "feedback": {
+            "title": "Démarche partiellement durable",
+            "fact": "10 milliards de capsules de café sont jetées chaque année dans le monde."
+          }
+        },
+        {
+          "text": "Systématiquement en vrac avec matériel réutilisable",
+          "points": 3,
+          "feedback": {
+            "title": "Approche zéro déchet parfaite !",
+            "fact": "10 milliards de capsules de café sont jetées chaque année dans le monde."
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "category": "energie",
+      "question": "Comment gérez-vous le chauffage chez vous ?",
+      "choices": [
+        {
+          "text": "Température élevée (>21°C) constamment",
+          "points": -3,
+          "feedback": {
+            "title": "Consommation énergétique élevée",
+            "fact": "Baisser le chauffage de 1°C permet d'économiser 7% d'énergie."
+          }
+        },
+        {
+          "text": "Température modérée et baisse la nuit",
+          "points": 1,
+          "feedback": {
+            "title": "Gestion raisonnée",
+            "fact": "Baisser le chauffage de 1°C permet d'économiser 7% d'énergie."
+          }
+        },
+        {
+          "text": "Chauffage optimisé et isolation améliorée",
+          "points": 3,
+          "feedback": {
+            "title": "Approche très efficace !",
+            "fact": "Baisser le chauffage de 1°C permet d'économiser 7% d'énergie."
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "category": "energie",
+      "question": "Pour vos appareils électroniques :",
+      "choices": [
+        {
+          "text": "Vous les laissez en veille constamment",
+          "points": -3,
+          "feedback": {
+            "title": "Consommation cachée importante",
+            "fact": "Les appareils en veille représentent jusqu'à 11% de la consommation électrique d'un foyer."
+          }
+        },
+        {
+          "text": "Vous éteignez les principaux appareils la nuit",
+          "points": 1,
+          "feedback": {
+            "title": "Bonne habitude partielle",
+            "fact": "Les appareils en veille représentent jusqu'à 11% de la consommation électrique d'un foyer."
+          }
+        },
+        {
+          "text": "Vous utilisez des multiprises à interrupteur et évitez les veilles",
+          "points": 3,
+          "feedback": {
+            "title": "Gestion énergétique optimale !",
+            "fact": "Les appareils en veille représentent jusqu'à 11% de la consommation électrique d'un foyer."
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "category": "energie",
+      "question": "Concernant l'éclairage :",
+      "choices": [
+        {
+          "text": "Ampoules classiques, lumières souvent allumées inutilement",
+          "points": -3,
+          "feedback": {
+            "title": "Gaspillage énergétique",
+            "fact": "Une ampoule LED consomme jusqu'à 80% d'électricité en moins qu'une ampoule classique."
+          }
+        },
+        {
+          "text": "Quelques ampoules LED, attention modérée",
+          "points": 1,
+          "feedback": {
+            "title": "Transition en cours",
+            "fact": "Une ampoule LED consomme jusqu'à 80% d'électricité en moins qu'une ampoule classique."
+          }
+        },
+        {
+          "text": "Tout en LED, extinction systématique des pièces inoccupées",
+          "points": 3,
+          "feedback": {
+            "title": "Éclairage parfaitement optimisé !",
+            "fact": "Une ampoule LED consomme jusqu'à 80% d'électricité en moins qu'une ampoule classique."
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "category": "energie",
+      "question": "Pour votre consommation d'eau :",
+      "choices": [
+        {
+          "text": "Douches longues quotidiennes et robinets ouverts",
+          "points": -3,
+          "feedback": {
+            "title": "Consommation d'eau excessive",
+            "fact": "Une douche de 5 minutes consomme 60 litres d'eau, contre 200 litres pour un bain."
+          }
+        },
+        {
+          "text": "Attention modérée à votre consommation",
+          "points": 1,
+          "feedback": {
+            "title": "Conscience de l'enjeu",
+            "fact": "Une douche de 5 minutes consomme 60 litres d'eau, contre 200 litres pour un bain."
+          }
+        },
+        {
+          "text": "Douches courtes, récupération d'eau, chasse d'eau économique",
+          "points": 3,
+          "feedback": {
+            "title": "Gestion de l'eau exemplaire !",
+            "fact": "Une douche de 5 minutes consomme 60 litres d'eau, contre 200 litres pour un bain."
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "category": "dechets",
+      "question": "Comment triez-vous vos déchets ?",
+      "choices": [
+        {
+          "text": "Peu ou pas de tri",
+          "points": -3,
+          "feedback": {
+            "title": "Opportunité manquée",
+            "fact": "Recycler une tonne de papier permet d'économiser 17 arbres et 20 000 litres d'eau."
+          }
+        },
+        {
+          "text": "Tri basique selon les consignes locales",
+          "points": 1,
+          "feedback": {
+            "title": "Participation citoyenne",
+            "fact": "Recycler une tonne de papier permet d'économiser 17 arbres et 20 000 litres d'eau."
+          }
+        },
+        {
+          "text": "Tri rigoureux incluant compost et filières spéciales",
+          "points": 3,
+          "feedback": {
+            "title": "Tri exemplaire !",
+            "fact": "Recycler une tonne de papier permet d'économiser 17 arbres et 20 000 litres d'eau."
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "category": "dechets",
+      "question": "Face aux emballages :",
+      "choices": [
+        {
+          "text": "Vous n'y prêtez pas attention particulière",
+          "points": -3,
+          "feedback": {
+            "title": "Impact des emballages sous-estimé",
+            "fact": "Un Français produit en moyenne 365kg d'emballages par an."
+          }
+        },
+        {
+          "text": "Vous évitez les produits sur-emballés quand c'est facile",
+          "points": 1,
+          "feedback": {
+            "title": "Démarche sélective",
+            "fact": "Un Français produit en moyenne 365kg d'emballages par an."
+          }
+        },
+        {
+          "text": "Vous privilégiez systématiquement le vrac et les contenants réutilisables",
+          "points": 3,
+          "feedback": {
+            "title": "Approche zéro déchet parfaite !",
+            "fact": "Un Français produit en moyenne 365kg d'emballages par an."
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "category": "dechets",
+      "question": "Pour vos achats du quotidien :",
+      "choices": [
+        {
+          "text": "Sacs plastiques jetables",
+          "points": -3,
+          "feedback": {
+            "title": "Pollution plastique",
+            "fact": "Un sac plastique est utilisé en moyenne 20 minutes mais met jusqu'à 400 ans à se dégrader."
+          }
+        },
+        {
+          "text": "Sacs réutilisables quand vous y pensez",
+          "points": 1,
+          "feedback": {
+            "title": "Habitude en développement",
+            "fact": "Un sac plastique est utilisé en moyenne 20 minutes mais met jusqu'à 400 ans à se dégrader."
+          }
+        },
+        {
+          "text": "Toujours un sac réutilisable avec vous",
+          "points": 3,
+          "feedback": {
+            "title": "Réflexe écologique parfait !",
+            "fact": "Un sac plastique est utilisé en moyenne 20 minutes mais met jusqu'à 400 ans à se dégrader."
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "category": "dechets",
+      "question": "Concernant les objets que vous n'utilisez plus :",
+      "choices": [
+        {
+          "text": "Vous les jetez à la poubelle",
+          "points": -3,
+          "feedback": {
+            "title": "Gaspillage de ressources",
+            "fact": "70% des déchets électroniques dans le monde ne sont pas correctement recyclés."
+          }
+        },
+        {
+          "text": "Vous les donnez ou recyclez occasionnellement",
+          "points": 1,
+          "feedback": {
+            "title": "Démarche partiellement circulaire",
+            "fact": "70% des déchets électroniques dans le monde ne sont pas correctement recyclés."
+          }
+        },
+        {
+          "text": "Vous les réparez, revendez ou donnez systématiquement",
+          "points": 3,
+          "feedback": {
+            "title": "Économie circulaire exemplaire !",
+            "fact": "70% des déchets électroniques dans le monde ne sont pas correctement recyclés."
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "category": "consommation",
+      "question": "Pour vos vêtements, vous privilégiez :",
+      "choices": [
+        {
+          "text": "La fast-fashion et les tendances",
+          "points": -3,
+          "feedback": {
+            "title": "Impact environnemental majeur",
+            "fact": "L'industrie textile est la 2ème plus polluante au monde après l'industrie pétrolière."
+          }
+        },
+        {
+          "text": "Un mélange de neuf et d'occasion",
+          "points": 1,
+          "feedback": {
+            "title": "Approche mixte",
+            "fact": "L'industrie textile est la 2ème plus polluante au monde après l'industrie pétrolière."
+          }
+        },
+        {
+          "text": "L'achat durable, la seconde main et la réparation",
+          "points": 3,
+          "feedback": {
+            "title": "Consommation textile responsable !",
+            "fact": "L'industrie textile est la 2ème plus polluante au monde après l'industrie pétrolière."
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "category": "consommation",
+      "question": "Pour vos appareils électroniques :",
+      "choices": [
+        {
+          "text": "Vous les changez souvent pour suivre les nouveautés",
+          "points": -3,
+          "feedback": {
+            "title": "Surconsommation technologique",
+            "fact": "Fabriquer un smartphone émet autant de CO2 que 85 000 km en voiture."
+          }
+        },
+        {
+          "text": "Vous les gardez tant qu'ils fonctionnent correctement",
+          "points": 1,
+          "feedback": {
+            "title": "Usage raisonné",
+            "fact": "Fabriquer un smartphone émet autant de CO2 que 85 000 km en voiture."
+          }
+        },
+        {
+          "text": "Vous les réparez et privilégiez le reconditionné",
+          "points": 3,
+          "feedback": {
+            "title": "Approche très durable !",
+            "fact": "Fabriquer un smartphone émet autant de CO2 que 85 000 km en voiture."
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "category": "consommation",
+      "question": "Concernant vos achats en ligne :",
+      "choices": [
+        {
+          "text": "Commandes fréquentes avec livraison express",
+          "points": -3,
+          "feedback": {
+            "title": "Impact logistique élevé",
+            "fact": "La livraison en 24h émet jusqu'à 30 fois plus de CO2 qu'une livraison standard."
+          }
+        },
+        {
+          "text": "Commandes groupées quand possible",
+          "points": 1,
+          "feedback": {
+            "title": "Optimisation partielle",
+            "fact": "La livraison en 24h émet jusqu'à 30 fois plus de CO2 qu'une livraison standard."
+          }
+        },
+        {
+          "text": "Achats locaux privilégiés, livraisons optimisées",
+          "points": 3,
+          "feedback": {
+            "title": "Logistique responsable !",
+            "fact": "La livraison en 24h émet jusqu'à 30 fois plus de CO2 qu'une livraison standard."
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "category": "consommation",
+      "question": "Pour vos produits d'hygiène et cosmétiques :",
+      "choices": [
+        {
+          "text": "Produits conventionnels à usage unique",
+          "points": -3,
+          "feedback": {
+            "title": "Impact packaging important",
+            "fact": "Un Français utilise en moyenne 18kg de produits cosmétiques par an."
+          }
+        },
+        {
+          "text": "Quelques alternatives durables",
+          "points": 1,
+          "feedback": {
+            "title": "Transition en cours",
+            "fact": "Un Français utilise en moyenne 18kg de produits cosmétiques par an."
+          }
+        },
+        {
+          "text": "Majoritairement solides, rechargeables ou zéro déchet",
+          "points": 3,
+          "feedback": {
+            "title": "Hygiène zéro déchet exemplaire !",
+            "fact": "Un Français utilise en moyenne 18kg de produits cosmétiques par an."
+          }
+        }
+      ]
+    }
+  ]
+}
