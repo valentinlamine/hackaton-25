@@ -53,23 +53,6 @@ function shuffleArray(array) {
 }
 
 /**
- * Calcule la couleur selon le pourcentage (système Rouge-Jaune-Vert)
- */
-function getColorFromPercentage(percentage) {
-  if (percentage >= 80) {
-    return "linear-gradient(90deg, #1e8449, #27ae60)"
-  } else if (percentage >= 60) {
-    return "linear-gradient(90deg, #27ae60, #58d68d)"
-  } else if (percentage >= 40) {
-    return "linear-gradient(90deg, #f4d03f, #f1c40f)"
-  } else if (percentage >= 20) {
-    return "linear-gradient(90deg, #f39c12, #f4d03f)"
-  } else {
-    return "linear-gradient(90deg, #e74c3c, #f39c12)"
-  }
-}
-
-/**
  * Initialisation du jeu
  */
 document.addEventListener("DOMContentLoaded", async () => {
@@ -416,7 +399,7 @@ function displayScoreCategory(score) {
 }
 
 /**
- * Génère le graphique par catégorie avec couleurs synchronisées
+ * Génère le graphique par catégorie avec barres Rouge-Vert synchronisées
  */
 function generateCategoryChart() {
   const chartContainer = document.getElementById("category-chart")
@@ -446,13 +429,10 @@ function generateCategoryChart() {
     const categoryItem = document.createElement("div")
     categoryItem.className = "category-item"
 
-    // Utilise la fonction pour obtenir la couleur selon le pourcentage
-    const barColor = getColorFromPercentage(percentage)
-
     categoryItem.innerHTML = `
       <div class="category-name" style="width: ${maxTextWidth + 10}px;">${category.icon} ${category.name}</div>
       <div class="category-bar">
-        <div class="category-bar-fill" style="width: ${percentage}%; background: ${barColor};"></div>
+        <div class="category-bar-fill" style="width: ${100 - percentage}%;"></div>
       </div>
       <div class="category-score">${percentage}%</div>
     `
