@@ -83,17 +83,17 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 ## 🛠️ Installation
 
 ### Déploiement Local
-\`\`\`bash
+```bash
 # Cloner le repository
 git clone [URL_DU_REPO]
 
 # Ouvrir index.html dans un navigateur
 # Ou utiliser un serveur local
 python -m http.server 8000
-\`\`\`
+```
 
 ### Structure du Projet
-\`\`\`
+```
 ecodecisions-game/
 ├── index.html          # Interface principale
 ├── style.css           # Styles et animations
@@ -101,7 +101,7 @@ ecodecisions-game/
 ├── questions.json      # Base de données des questions
 ├── ecologia.svg        # Logo de l'application
 └── README.md          # Documentation
-\`\`\`
+```
 
 ## 🏆 Résultats et Apprentissages
 
