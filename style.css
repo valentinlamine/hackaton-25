@@ -723,11 +723,11 @@ body {
   flex-shrink: 0;
 }
 
-/* Barres de progression avec dégradé Rouge-Vert sur fond gris */
+/* Barres de progression simples */
 .category-bar {
   flex: 1;
   height: 12px;
-  background: #e9ecef;
+  background: var(--light-gray);
   border-radius: 6px;
   overflow: hidden;
   position: relative;
@@ -736,15 +736,7 @@ body {
 
 .category-bar-fill {
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--danger-red) 0%,
-    var(--warning-red) 20%,
-    var(--warning-orange) 40%,
-    var(--warning-yellow) 60%,
-    var(--success-light) 80%,
-    var(--success-green) 100%
-  );
+  background: linear-gradient(90deg, var(--success-light), var(--success-green));
   border-radius: 6px;
   transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
   animation: barFill 1.5s cubic-bezier(0.4, 0, 0.2, 1);
