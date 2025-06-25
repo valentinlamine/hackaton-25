@@ -1,4 +1,4 @@
-/* Variables CSS pour la cohérence */
+/* Variables CSS pour la cohérence - Système Rouge-Jaune-Vert */
 :root {
   --primary-green: #2d5a27;
   --secondary-green: #4a7c59;
@@ -6,8 +6,16 @@
   --accent-green: #a7c957;
   --nature-blue: #2e86ab;
   --light-blue: #5ba3c7;
-  --warning-orange: #f18f01;
-  --danger-red: #c73e1d;
+
+  /* Nouveau système de couleurs Rouge-Jaune-Vert */
+  --danger-red: #e74c3c;
+  --warning-red: #f39c12;
+  --warning-orange: #f1c40f;
+  --warning-yellow: #f4d03f;
+  --success-light: #58d68d;
+  --success-green: #27ae60;
+  --excellent-green: #1e8449;
+
   --neutral-gray: #6c757d;
   --light-gray: #f8f9fa;
   --white: #ffffff;
@@ -72,21 +80,21 @@ body {
 /* Écran d'accueil - Optimisé pour tenir en une page */
 .welcome-header {
   text-align: center;
-  margin-bottom: 2rem; /* Réduit de 3rem à 2rem */
+  margin-bottom: 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem; /* Réduit de 1.5rem à 1rem */
+  margin-bottom: 1rem;
 }
 
 .logo-banner {
   max-width: 100%;
   height: auto;
-  width: 320px; /* Réduit de 400px à 320px */
-  max-height: 80px; /* Réduit de 120px à 80px */
+  width: 320px;
+  max-height: 80px;
   animation: pulse 3s infinite;
   filter: brightness(0) invert(1) drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.3));
 }
@@ -109,7 +117,7 @@ body {
 }
 
 .subtitle {
-  font-size: 1.1rem; /* Réduit de 1.3rem à 1.1rem */
+  font-size: 1.1rem;
   color: var(--white);
   text-shadow: 1px 1px 4px var(--shadow-light);
   max-width: 600px;
@@ -120,44 +128,44 @@ body {
 .welcome-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Réduit de 2rem à 1.5rem */
+  gap: 1.5rem;
 }
 
 .info-card {
   background: var(--white);
   border-radius: var(--border-radius);
-  padding: 1.8rem; /* Réduit de 2.5rem à 1.8rem */
+  padding: 1.8rem;
   box-shadow: 0 20px 40px var(--shadow-light);
   backdrop-filter: blur(10px);
 }
 
 .info-card h2 {
   color: var(--primary-green);
-  margin-bottom: 1.2rem; /* Réduit de 2rem à 1.2rem */
-  font-size: 1.3rem; /* Réduit de 1.5rem à 1.3rem */
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Force 2 colonnes au lieu d'auto-fit */
-  gap: 1rem; /* Réduit de 1.5rem à 1rem */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .info-item {
   text-align: center;
-  padding: 0.8rem; /* Réduit de 1rem à 0.8rem */
+  padding: 0.8rem;
 }
 
 .info-icon {
-  font-size: 1.6rem; /* Réduit de 2rem à 1.6rem */
-  margin-bottom: 0.4rem; /* Réduit de 0.5rem à 0.4rem */
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .info-item p {
-  font-size: 0.9rem; /* Réduit de 0.95rem à 0.9rem */
+  font-size: 0.9rem;
   color: var(--text-light);
-  line-height: 1.4; /* Améliore la compacité */
+  line-height: 1.4;
 }
 
 /* Boutons */
@@ -165,16 +173,16 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* Réduit de 10px à 8px */
-  padding: 14px 28px; /* Réduit de 16px 32px à 14px 28px */
+  gap: 8px;
+  padding: 14px 28px;
   border: none;
   border-radius: 50px;
-  font-size: 1rem; /* Réduit de 1.1rem à 1rem */
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
-  min-width: 180px; /* Réduit de 200px à 180px */
+  min-width: 180px;
   position: relative;
   overflow: hidden;
 }
@@ -221,7 +229,7 @@ body {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 0.5rem; /* Ajoute une petite marge pour équilibrer */
+  margin-top: 0.5rem;
 }
 
 /* Modal */
@@ -324,12 +332,12 @@ body {
 }
 
 .score-neutral {
-  color: var(--neutral-gray);
+  color: var(--warning-orange);
   font-weight: 600;
 }
 
 .score-positive {
-  color: var(--accent-green);
+  color: var(--success-green);
   font-weight: 600;
 }
 
@@ -373,13 +381,13 @@ body {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-green), var(--light-green));
+  background: linear-gradient(90deg, var(--success-light), var(--success-green));
   border-radius: 4px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   width: 0%;
 }
 
-/* Jauge écologique */
+/* Jauge écologique - Nouveau système Rouge-Jaune-Vert */
 .eco-gauge {
   margin-top: 1.5rem;
 }
@@ -389,10 +397,11 @@ body {
   background: linear-gradient(
     90deg,
     var(--danger-red) 0%,
-    var(--warning-orange) 25%,
-    var(--neutral-gray) 50%,
-    var(--light-green) 75%,
-    var(--accent-green) 100%
+    var(--warning-red) 20%,
+    var(--warning-orange) 40%,
+    var(--warning-yellow) 60%,
+    var(--success-light) 80%,
+    var(--success-green) 100%
   );
   border-radius: 6px;
   position: relative;
@@ -435,10 +444,10 @@ body {
   color: var(--danger-red);
 }
 .label-neutral {
-  color: var(--neutral-gray);
+  color: var(--warning-orange);
 }
 .label-positive {
-  color: var(--accent-green);
+  color: var(--success-green);
 }
 
 /* Question Card */
@@ -782,33 +791,33 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 12px; /* Réduit de 15px à 12px */
+    padding: 12px;
   }
 
   .logo-banner {
-    width: 280px; /* Réduit de 300px à 280px */
-    max-height: 70px; /* Réduit de 90px à 70px */
+    width: 280px;
+    max-height: 70px;
   }
 
   .subtitle {
-    font-size: 1rem; /* Réduit de 1.1rem à 1rem */
+    font-size: 1rem;
   }
 
   .info-grid {
-    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-    gap: 0.8rem; /* Réduit de 1rem à 0.8rem */
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .info-card {
-    padding: 1.5rem; /* Réduit le padding sur mobile */
+    padding: 1.5rem;
   }
 
   .welcome-content {
-    gap: 1.2rem; /* Réduit l'espacement sur mobile */
+    gap: 1.2rem;
   }
 
   .welcome-header {
-    margin-bottom: 1.5rem; /* Réduit sur mobile */
+    margin-bottom: 1.5rem;
   }
 
   .action-buttons {
@@ -905,21 +914,21 @@ body {
   }
 
   .logo-banner {
-    width: 240px; /* Réduit de 250px à 240px */
-    max-height: 60px; /* Réduit de 75px à 60px */
+    width: 240px;
+    max-height: 60px;
   }
 
   .info-card {
-    padding: 1.2rem; /* Encore plus compact sur très petit écran */
+    padding: 1.2rem;
   }
 
   .info-item {
-    padding: 0.6rem; /* Réduit le padding des items */
+    padding: 0.6rem;
   }
 
   .btn {
-    padding: 12px 24px; /* Boutons plus compacts */
-    min-width: 160px; /* Largeur minimale réduite */
+    padding: 12px 24px;
+    min-width: 160px;
   }
 }
 
@@ -987,63 +996,64 @@ body {
   }
 }
 
+/* Nouveaux styles pour les scores avec système Rouge-Jaune-Vert */
 .score-circle.score-excellent {
-  border-color: var(--accent-green);
+  border-color: var(--excellent-green);
 }
 
 .score-circle.score-excellent::before {
   background: conic-gradient(
     from 0deg,
-    var(--accent-green) 0deg,
-    var(--light-green) 90deg,
-    var(--secondary-green) 180deg,
-    var(--primary-green) 270deg,
-    var(--accent-green) 360deg
+    var(--excellent-green) 0deg,
+    var(--success-green) 90deg,
+    var(--success-light) 180deg,
+    var(--success-green) 270deg,
+    var(--excellent-green) 360deg
   );
 }
 
 .score-circle.score-good {
-  border-color: var(--light-green);
+  border-color: var(--success-green);
 }
 
 .score-circle.score-good::before {
   background: conic-gradient(
     from 0deg,
-    var(--light-green) 0deg,
-    var(--secondary-green) 90deg,
-    var(--nature-blue) 180deg,
-    var(--light-green) 270deg,
-    var(--light-green) 360deg
+    var(--success-green) 0deg,
+    var(--success-light) 90deg,
+    var(--warning-yellow) 180deg,
+    var(--success-light) 270deg,
+    var(--success-green) 360deg
   );
 }
 
 .score-circle.score-neutral {
-  border-color: var(--neutral-gray);
+  border-color: var(--warning-orange);
 }
 
 .score-circle.score-neutral::before {
   background: conic-gradient(
     from 0deg,
-    var(--neutral-gray) 0deg,
-    #8a8a8a 90deg,
-    #6c757d 180deg,
-    var(--neutral-gray) 270deg,
-    var(--neutral-gray) 360deg
+    var(--warning-orange) 0deg,
+    var(--warning-yellow) 90deg,
+    var(--warning-red) 180deg,
+    var(--warning-orange) 270deg,
+    var(--warning-orange) 360deg
   );
 }
 
 .score-circle.score-warning {
-  border-color: var(--warning-orange);
+  border-color: var(--warning-red);
 }
 
 .score-circle.score-warning::before {
   background: conic-gradient(
     from 0deg,
-    var(--warning-orange) 0deg,
-    #ff9500 90deg,
-    #e67e00 180deg,
-    var(--warning-orange) 270deg,
-    var(--warning-orange) 360deg
+    var(--warning-red) 0deg,
+    var(--warning-orange) 90deg,
+    var(--danger-red) 180deg,
+    var(--warning-red) 270deg,
+    var(--warning-red) 360deg
   );
 }
 
@@ -1055,7 +1065,7 @@ body {
   background: conic-gradient(
     from 0deg,
     var(--danger-red) 0deg,
-    #e74c3c 90deg,
+    var(--warning-red) 90deg,
     #c0392b 180deg,
     var(--danger-red) 270deg,
     var(--danger-red) 360deg

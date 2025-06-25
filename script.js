@@ -53,6 +53,23 @@ function shuffleArray(array) {
 }
 
 /**
+ * Calcule la couleur selon le pourcentage (système Rouge-Jaune-Vert)
+ */
+function getColorFromPercentage(percentage) {
+  if (percentage >= 80) {
+    return "linear-gradient(90deg, #1e8449, #27ae60)"
+  } else if (percentage >= 60) {
+    return "linear-gradient(90deg, #27ae60, #58d68d)"
+  } else if (percentage >= 40) {
+    return "linear-gradient(90deg, #f4d03f, #f1c40f)"
+  } else if (percentage >= 20) {
+    return "linear-gradient(90deg, #f39c12, #f4d03f)"
+  } else {
+    return "linear-gradient(90deg, #e74c3c, #f39c12)"
+  }
+}
+
+/**
  * Initialisation du jeu
  */
 document.addEventListener("DOMContentLoaded", async () => {
@@ -361,7 +378,7 @@ function animateScore(targetScore) {
 }
 
 /**
- * Affiche la catégorie de score
+ * Affiche la catégorie de score avec nouveau système de couleurs
  */
 function displayScoreCategory(score) {
   const categoryElement = document.getElementById("score-category")
@@ -373,23 +390,23 @@ function displayScoreCategory(score) {
 
   if (score >= 80) {
     category = "🌟 Éco-champion ! Impact très positif"
-    background = "linear-gradient(135deg, #2d5a27, #4a7c59)"
+    background = "linear-gradient(135deg, #1e8449, #27ae60)"
     scoreClass = "score-excellent"
   } else if (score >= 60) {
     category = "🌱 Bon éco-citoyen ! Impact positif"
-    background = "linear-gradient(135deg, #4a7c59, #7fb069)"
+    background = "linear-gradient(135deg, #27ae60, #58d68d)"
     scoreClass = "score-good"
   } else if (score >= 40) {
     category = "⚖️ Impact neutre, des améliorations possibles"
-    background = "linear-gradient(135deg, #6c757d, #495057)"
+    background = "linear-gradient(135deg, #f1c40f, #f4d03f)"
     scoreClass = "score-neutral"
   } else if (score >= 20) {
     category = "⚠️ Impact négatif, changements nécessaires"
-    background = "linear-gradient(135deg, #f18f01, #ff9500)"
+    background = "linear-gradient(135deg, #f39c12, #f1c40f)"
     scoreClass = "score-warning"
   } else {
     category = "🚨 Impact très négatif, action urgente requise"
-    background = "linear-gradient(135deg, #c73e1d, #e74c3c)"
+    background = "linear-gradient(135deg, #e74c3c, #f39c12)"
     scoreClass = "score-danger"
   }
 
@@ -399,7 +416,7 @@ function displayScoreCategory(score) {
 }
 
 /**
- * Génère le graphique par catégorie
+ * Génère le graphique par catégorie avec couleurs synchronisées
  */
 function generateCategoryChart() {
   const chartContainer = document.getElementById("category-chart")
@@ -429,17 +446,8 @@ function generateCategoryChart() {
     const categoryItem = document.createElement("div")
     categoryItem.className = "category-item"
 
-    // Détermine la couleur selon le score
-    let barColor
-    if (percentage >= 70) {
-      barColor = "linear-gradient(90deg, var(--accent-green), var(--light-green))"
-    } else if (percentage >= 50) {
-      barColor = "linear-gradient(90deg, var(--light-green), var(--secondary-green))"
-    } else if (percentage >= 30) {
-      barColor = "linear-gradient(90deg, var(--warning-orange), #ff9500)"
-    } else {
-      barColor = "linear-gradient(90deg, var(--danger-red), #e74c3c)"
-    }
+    // Utilise la fonction pour obtenir la couleur selon le pourcentage
+    const barColor = getColorFromPercentage(percentage)
 
     categoryItem.innerHTML = `
       <div class="category-name" style="width: ${maxTextWidth + 10}px;">${category.icon} ${category.name}</div>
