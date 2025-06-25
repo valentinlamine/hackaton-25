@@ -20,6 +20,10 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 
 **Application déployée :** [https://ecologia-25.vercel.app/](https://ecologia-25.vercel.app/)
 
+## 📊 Présentation
+
+**Présentation Canva :** [Voir la présentation du projet](https://www.canva.com/design/DAGrWH8qPoE/HAW2zclcgmA36OEIscJ9Ng/edit?utm_content=DAGrWH8qPoE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ### Fonctionnalités
 - Quiz interactif de 20 questions personnalisées
 - Système de scoring intelligent (-60 à +60 points)
@@ -83,17 +87,17 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 ## 🛠️ Installation
 
 ### Déploiement Local
-\`\`\`bash
+```bash
 # Cloner le repository
 git clone [https://github.com/valentinlamine/hackaton-25]
 
 # Ouvrir index.html dans un navigateur
 # Ou utiliser un serveur local
 python -m http.server 8000
-\`\`\`
+```
 
 ### Structure du Projet
-\`\`\`
+```
 ecologia/
 ├── index.html          # Interface principale
 ├── style.css           # Styles et animations
@@ -101,7 +105,7 @@ ecologia/
 ├── questions.json      # Base de données des questions
 ├── ecologia.svg        # Logo de l'application
 └── README.md          # Documentation
-\`\`\`
+```
 
 ## 🏆 Résultats et Apprentissages
 
