@@ -723,10 +723,19 @@ body {
   flex-shrink: 0;
 }
 
-/* Barres de progression avec dégradé complet Rouge-Vert */
+/* Barres de progression avec dégradé Rouge-Vert sur fond gris */
 .category-bar {
   flex: 1;
   height: 12px;
+  background: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  min-width: 200px;
+}
+
+.category-bar-fill {
+  height: 100%;
   background: linear-gradient(
     90deg,
     var(--danger-red) 0%,
@@ -737,25 +746,14 @@ body {
     var(--success-green) 100%
   );
   border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  min-width: 200px;
-}
-
-.category-bar-fill {
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
   transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
   animation: barFill 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 0%;
 }
 
 @keyframes barFill {
   from {
-    width: 100%;
+    width: 0%;
   }
   to {
     width: var(--final-width, 0%);

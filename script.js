@@ -432,7 +432,7 @@ function generateCategoryChart() {
     categoryItem.innerHTML = `
       <div class="category-name" style="width: ${maxTextWidth + 10}px;">${category.icon} ${category.name}</div>
       <div class="category-bar">
-        <div class="category-bar-fill" style="width: ${100 - percentage}%;"></div>
+        <div class="category-bar-fill" style="width: ${percentage}%;"></div>
       </div>
       <div class="category-score">${percentage}%</div>
     `
