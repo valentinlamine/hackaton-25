@@ -20,6 +20,10 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 
 **Application déployée :** [https://ecologia-25.vercel.app/](https://ecologia-25.vercel.app/)
 
+## 📊 Présentation
+
+**Présentation Canva :** [Voir la présentation du projet](https://www.canva.com/design/DAGrWH8qPoE/HAW2zclcgmA36OEIscJ9Ng/edit?utm_content=DAGrWH8qPoE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ### Fonctionnalités
 - Quiz interactif de 20 questions personnalisées
 - Système de scoring intelligent (-60 à +60 points)
