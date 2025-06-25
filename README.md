@@ -85,7 +85,7 @@ EcologIA sensibilise aux comportements durables à travers un quiz interactif de
 ### Déploiement Local
 ```bash
 # Cloner le repository
-git clone [URL_DU_REPO]
+git clone [https://github.com/valentinlamine/hackaton-25]
 
 # Ouvrir index.html dans un navigateur
 # Ou utiliser un serveur local
